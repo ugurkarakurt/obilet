@@ -340,6 +340,7 @@ template {
   display: none; }
 
 #root {
+  border: 1px solid #f8f8f8;
   margin: 50px auto;
   width: 320px;
   display: flex;
@@ -527,6 +528,9 @@ template {
             align-items: center;
             width: 56px;
             border-radius: 2px; }
+            #root main form .date-input-group .date-buttons button:active {
+              position: relative;
+              top: 1px; }
             #root main form .date-input-group .date-buttons button:first-child {
               background-color: #5d686e;
               margin-bottom: 8px;
@@ -595,5 +599,29 @@ template {
               color: #000;
               padding: 10px 0px;
               font-size: 15px; }
+      #root main form .find-ticket {
+        width: 100%;
+        margin-top: 21px;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        #root main form .find-ticket button {
+          border-radius: 4px;
+          padding: 11px 70px;
+          font-size: 17px;
+          background-color: #2f4eb4;
+          color: #fff; }
+          #root main form .find-ticket button:active {
+            position: relative;
+            top: 1px; }
+  #root footer {
+    padding: 13px 20px 31px 29px; }
+    #root footer p {
+      color: #5d686e;
+      font-size: 12px;
+      display: -webkit-box;
+      -webkit-line-clamp: 10;
+      -webkit-box-orient: vertical;
+      overflow: hidden; }
 
 /*# sourceMappingURL=style.css.map */

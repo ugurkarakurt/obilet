@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/codemirror.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root">
+        <header>
+            <h1>Şu Bilet</h1>
+        </header>
+        <main>
+            <form id="search">
+                <div class="location-input-group">
+                    <span class="double-arrows">
+                        <img src="./assets/img/double-arrows.svg" alt="">
+                    </span>
+                    <div class="origin-input-group">
+                        <span class="origin-title">Nereden</span>
+                        <div class="origin js-origin">
+                            <input disabled type="text" class="origin-input js-origin-input" value="İstanbul Avrupa">
+                            <div class="origin-locations js-origin-locations">
+                            </div>
+                            <span class="location-icon">
+                                <img src="./assets/img/origin.svg" alt="">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="destination-input-group">
+                        <span class="destination-title">Nereye</span>
+                        <div class="destination js-destination">
+                            <input disabled type="text" class="destination-input js-destination-input" value="Ankara">
+                            <div class="destination-locations js-destination-locations">
+
+                            </div>
+                            <span class="location-icon">
+                                <img src="./assets/img/destination.svg" alt="">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </main>
+    </div>
+
+    <script type="module" src="./assets/js/app.js"></script>
+</body>
+
+</html>

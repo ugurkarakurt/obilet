@@ -149,7 +149,6 @@ html {
   -webkit-text-size-adjust: 100%; }
 
 body {
-  height: 100vh;
   width: 100%; }
 
 article,
@@ -339,248 +338,90 @@ template {
 [hidden] {
   display: none; }
 
-#root {
-  border: 1px solid #f8f8f8;
-  margin: 50px auto;
-  width: 320px;
+header {
+  padding: 10px;
+  background-color: #2f4eb4;
+  height: 40px;
+  width: 100%;
   display: flex;
-  flex-direction: column; }
-  #root header {
-    padding: 10px;
-    background-color: #2f4eb4;
-    height: 40px;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center; }
-    #root header h1 {
-      margin: 0;
-      color: #fff;
-      font-size: 15px;
-      line-height: 1.1; }
-  #root main {
-    background-color: #f8f8f8;
-    padding: 27px 16px;
+  justify-content: flex-start;
+  align-items: center; }
+  header h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.1; }
+
+main {
+  background-color: #f8f8f8;
+  padding: 27px 16px;
+  width: 100%; }
+  main form {
     width: 100%; }
-    #root main form {
-      width: 100%; }
-      #root main form .location-input-group {
-        position: relative;
-        width: 100%;
+    main form .location-input-group {
+      position: relative;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start; }
+      main form .location-input-group .double-arrows {
+        background-color: #fff;
+        cursor: pointer;
+        border-radius: 50%;
+        border: 1px solid #5d686e;
+        padding: 4px;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        display: block;
+        height: 20px;
+        width: 20px;
+        z-index: 100;
         display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start; }
-        #root main form .location-input-group .double-arrows {
-          cursor: pointer;
-          border-radius: 50%;
-          border: 1px solid #5d686e;
-          padding: 4px;
-          position: absolute;
-          top: 50%;
-          right: 20px;
-          transform: translateY(-50%);
-          display: block;
-          height: 20px;
-          width: 20px;
-          z-index: 100;
-          display: flex;
-          justify-content: center;
-          align-items: center; }
-        #root main form .location-input-group .origin-input-group {
-          margin-bottom: 3px;
-          padding: 11px 0;
-          background-color: #fff;
-          height: 64px;
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          align-items: center; }
-          #root main form .location-input-group .origin-input-group .origin-title {
-            width: 100%;
-            flex: 1 1;
-            font-size: 14px;
-            color: #2f4eb4;
-            padding: 0 31px; }
-          #root main form .location-input-group .origin-input-group .origin {
-            padding: 0 31px;
-            width: 100%;
-            flex: 1 1;
-            position: relative; }
-            #root main form .location-input-group .origin-input-group .origin .origin-input {
-              background-color: #fff;
-              color: #5d686e;
-              font-size: 15px;
-              width: 100%;
-              height: 100%; }
-            #root main form .location-input-group .origin-input-group .origin .location-icon {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              position: absolute;
-              left: 5px;
-              top: 50%;
-              transform: translateY(-50%); }
-              #root main form .location-input-group .origin-input-group .origin .location-icon img {
-                height: 20px; }
-            #root main form .location-input-group .origin-input-group .origin .origin-locations {
-              -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.26);
-              -moz-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.26);
-              box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.26);
-              display: none;
-              padding: 0 31px;
-              position: absolute;
-              background-color: #fff;
-              left: 0;
-              top: calc(100% + 14px);
-              width: 100%;
-              z-index: 99; }
-              #root main form .location-input-group .origin-input-group .origin .origin-locations.opened {
-                display: block; }
-              #root main form .location-input-group .origin-input-group .origin .origin-locations .location {
-                cursor: pointer;
-                color: #000;
-                padding: 10px 0px;
-                font-size: 15px; }
-        #root main form .location-input-group .destination-input-group {
-          padding: 11px 0;
-          background-color: #fff;
-          height: 64px;
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          align-items: center; }
-          #root main form .location-input-group .destination-input-group .destination-title {
-            width: 100%;
-            flex: 1 1;
-            font-size: 14px;
-            color: #2f4eb4;
-            padding: 0 31px; }
-          #root main form .location-input-group .destination-input-group .destination {
-            padding: 0 31px;
-            width: 100%;
-            flex: 1 1;
-            position: relative; }
-            #root main form .location-input-group .destination-input-group .destination .destination-input {
-              width: 100%;
-              height: 100%;
-              color: #5d686e;
-              font-size: 15px;
-              background-color: #fff; }
-            #root main form .location-input-group .destination-input-group .destination .location-icon {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              position: absolute;
-              left: 5px;
-              top: 50%;
-              transform: translateY(-50%); }
-              #root main form .location-input-group .destination-input-group .destination .location-icon img {
-                height: 20px; }
-            #root main form .location-input-group .destination-input-group .destination .destination-locations {
-              -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.26);
-              -moz-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.26);
-              box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.26);
-              display: none;
-              padding: 0 31px;
-              position: absolute;
-              background-color: #fff;
-              left: 0;
-              top: calc(100% + 14px);
-              width: 100%;
-              z-index: 99; }
-              #root main form .location-input-group .destination-input-group .destination .destination-locations.opened {
-                display: block; }
-              #root main form .location-input-group .destination-input-group .destination .destination-locations .location {
-                cursor: pointer;
-                color: #000;
-                padding: 10px 0px;
-                font-size: 15px; }
-      #root main form .date-input-group {
-        height: 72px;
-        margin-top: 20px;
+        justify-content: center;
+        align-items: center; }
+      main form .location-input-group .origin-input-group {
+        margin-bottom: 3px;
         padding: 11px 0;
         background-color: #fff;
+        height: 64px;
         width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        align-items: center;
-        position: relative; }
-        #root main form .date-input-group .date-buttons {
-          position: absolute;
-          right: 10px;
-          top: 50%;
-          transform: translateY(-50%);
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center; }
-          #root main form .date-input-group .date-buttons button {
-            cursor: pointer;
-            padding-top: 2px;
-            height: 24px;
-            font-size: 12px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 56px;
-            border-radius: 2px; }
-            #root main form .date-input-group .date-buttons button:active {
-              position: relative;
-              top: 1px; }
-            #root main form .date-input-group .date-buttons button:first-child {
-              background-color: #5d686e;
-              margin-bottom: 8px;
-              color: #fff; }
-            #root main form .date-input-group .date-buttons button:last-child {
-              color: #5d686e;
-              border: 1px solid #5d686e; }
-        #root main form .date-input-group .date-title {
+        align-items: center; }
+        main form .location-input-group .origin-input-group.error {
+          border: 1px solid red; }
+        main form .location-input-group .origin-input-group .origin-title {
           width: 100%;
           flex: 1 1;
           font-size: 14px;
           color: #2f4eb4;
           padding: 0 31px; }
-        #root main form .date-input-group .date {
+        main form .location-input-group .origin-input-group .origin {
           padding: 0 31px;
           width: 100%;
           flex: 1 1;
-          position: relative;
-          border: none;
-          box-sizing: border-box;
-          outline: 0;
-          width: 100%; }
-          #root main form .date-input-group .date .date-input {
+          position: relative; }
+          main form .location-input-group .origin-input-group .origin .origin-input {
             background-color: #fff;
             color: #5d686e;
             font-size: 15px;
             width: 100%;
             height: 100%; }
-            #root main form .date-input-group .date .date-input::-webkit-inner-spin-button, #root main form .date-input-group .date .date-input::-webkit-calendar-picker-indicator {
-              background: transparent;
-              bottom: 0;
-              color: transparent;
-              cursor: pointer;
-              height: auto;
-              left: 0;
-              position: absolute;
-              right: 0;
-              top: 0;
-              width: auto; }
-          #root main form .date-input-group .date .date-icon {
+          main form .location-input-group .origin-input-group .origin .location-icon {
             display: flex;
             justify-content: center;
             align-items: center;
             position: absolute;
-            left: 7px;
+            left: 5px;
             top: 50%;
             transform: translateY(-50%); }
-            #root main form .date-input-group .date .date-icon img {
-              height: 15px; }
-          #root main form .date-input-group .date .date-locations {
+            main form .location-input-group .origin-input-group .origin .location-icon img {
+              height: 20px; }
+          main form .location-input-group .origin-input-group .origin .origin-locations {
             -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.26);
             -moz-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.26);
             box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.26);
@@ -592,36 +433,317 @@ template {
             top: calc(100% + 14px);
             width: 100%;
             z-index: 99; }
-            #root main form .date-input-group .date .date-locations.opened {
+            main form .location-input-group .origin-input-group .origin .origin-locations.opened {
               display: block; }
-            #root main form .date-input-group .date .date-locations .date {
+            main form .location-input-group .origin-input-group .origin .origin-locations .location {
               cursor: pointer;
               color: #000;
               padding: 10px 0px;
               font-size: 15px; }
-      #root main form .find-ticket {
+      main form .location-input-group .destination-input-group {
+        padding: 11px 0;
+        background-color: #fff;
+        height: 64px;
         width: 100%;
-        margin-top: 21px;
         display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center; }
+        main form .location-input-group .destination-input-group.error {
+          border: 1px solid red; }
+        main form .location-input-group .destination-input-group .destination-title {
+          width: 100%;
+          flex: 1 1;
+          font-size: 14px;
+          color: #2f4eb4;
+          padding: 0 31px; }
+        main form .location-input-group .destination-input-group .destination {
+          padding: 0 31px;
+          width: 100%;
+          flex: 1 1;
+          position: relative; }
+          main form .location-input-group .destination-input-group .destination .destination-input {
+            width: 100%;
+            height: 100%;
+            color: #5d686e;
+            font-size: 15px;
+            background-color: #fff; }
+          main form .location-input-group .destination-input-group .destination .location-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            transform: translateY(-50%); }
+            main form .location-input-group .destination-input-group .destination .location-icon img {
+              height: 20px; }
+          main form .location-input-group .destination-input-group .destination .destination-locations {
+            -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.26);
+            -moz-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.26);
+            box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.26);
+            display: none;
+            padding: 0 31px;
+            position: absolute;
+            background-color: #fff;
+            left: 0;
+            top: calc(100% + 14px);
+            width: 100%;
+            z-index: 99; }
+            main form .location-input-group .destination-input-group .destination .destination-locations.opened {
+              display: block; }
+            main form .location-input-group .destination-input-group .destination .destination-locations .location {
+              cursor: pointer;
+              color: #000;
+              padding: 10px 0px;
+              font-size: 15px; }
+    main form .alert {
+      display: none;
+      font-size: 10px;
+      padding: 5px 0;
+      color: red; }
+    main form .date-input-group {
+      height: 72px;
+      margin-top: 20px;
+      padding: 11px 0;
+      background-color: #fff;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      position: relative; }
+      main form .date-input-group .date-buttons {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center; }
-        #root main form .find-ticket button {
-          border-radius: 4px;
-          padding: 11px 70px;
-          font-size: 17px;
-          background-color: #2f4eb4;
-          color: #fff; }
-          #root main form .find-ticket button:active {
+        main form .date-input-group .date-buttons button {
+          cursor: pointer;
+          padding-top: 2px;
+          height: 24px;
+          font-size: 12px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 56px;
+          border-radius: 2px; }
+          main form .date-input-group .date-buttons button:active {
             position: relative;
             top: 1px; }
-  #root footer {
-    padding: 13px 20px 31px 29px; }
-    #root footer p {
-      color: #5d686e;
-      font-size: 12px;
-      display: -webkit-box;
-      -webkit-line-clamp: 10;
-      -webkit-box-orient: vertical;
-      overflow: hidden; }
+          main form .date-input-group .date-buttons button:first-child {
+            background-color: #5d686e;
+            margin-bottom: 8px;
+            color: #fff; }
+          main form .date-input-group .date-buttons button:last-child {
+            color: #5d686e;
+            border: 1px solid #5d686e; }
+      main form .date-input-group .date-title {
+        width: 100%;
+        flex: 1 1;
+        font-size: 14px;
+        color: #2f4eb4;
+        padding: 0 31px; }
+      main form .date-input-group .date {
+        padding: 0 31px;
+        width: 100%;
+        flex: 1 1;
+        position: relative;
+        border: none;
+        box-sizing: border-box;
+        outline: 0;
+        width: 100%; }
+        main form .date-input-group .date .date-input {
+          background-color: #fff;
+          color: #5d686e;
+          font-size: 15px;
+          width: 100%;
+          height: 100%; }
+          main form .date-input-group .date .date-input::-webkit-inner-spin-button, main form .date-input-group .date .date-input::-webkit-calendar-picker-indicator {
+            background: transparent;
+            bottom: 0;
+            color: transparent;
+            cursor: pointer;
+            height: auto;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: auto; }
+        main form .date-input-group .date .date-icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          left: 7px;
+          top: 50%;
+          transform: translateY(-50%); }
+          main form .date-input-group .date .date-icon img {
+            height: 15px; }
+        main form .date-input-group .date .date-locations {
+          -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.26);
+          -moz-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.26);
+          box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.26);
+          display: none;
+          padding: 0 31px;
+          position: absolute;
+          background-color: #fff;
+          left: 0;
+          top: calc(100% + 14px);
+          width: 100%;
+          z-index: 99; }
+          main form .date-input-group .date .date-locations.opened {
+            display: block; }
+          main form .date-input-group .date .date-locations .date {
+            cursor: pointer;
+            color: #000;
+            padding: 10px 0px;
+            font-size: 15px; }
+    main form .find-ticket {
+      width: 100%;
+      margin-top: 21px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      main form .find-ticket button {
+        min-width: 207px;
+        border-radius: 4px;
+        padding: 11px 70px;
+        font-size: 17px;
+        background-color: #2f4eb4;
+        color: #fff; }
+        main form .find-ticket button:active {
+          position: relative;
+          top: 1px; }
+        main form .find-ticket button svg {
+          animation: lds-dual-ring 1.2s linear infinite; }
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+footer {
+  padding: 13px 20px 31px 29px; }
+  footer p {
+    color: #5d686e;
+    font-size: 12px;
+    display: -webkit-box;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
+    overflow: hidden; }
+
+.journey-modal {
+  display: none;
+  z-index: 999;
+  background-color: #fff;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%; }
+  .journey-modal .modal-title {
+    position: relative;
+    background-color: #2f4eb4;
+    width: 100%;
+    height: 72px;
+    color: #fff;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .journey-modal .modal-title .modal-back-button {
+      position: absolute;
+      left: 10px;
+      top: 20px;
+      cursor: pointer; }
+      .journey-modal .modal-title .modal-back-button img {
+        transform: rotate(180deg); }
+    .journey-modal .modal-title .modal-locations {
+      font-size: 14px; }
+    .journey-modal .modal-title .modal-date {
+      margin-top: 5px;
+      font-size: 12px; }
+  .journey-modal .modal-body {
+    background-color: #f3f3f3;
+    height: 100%;
+    width: 100%; }
+    .journey-modal .modal-body ul {
+      height: 100%;
+      width: 100%;
+      overflow-y: auto; }
+      .journey-modal .modal-body ul li {
+        padding: 8px; }
+        .journey-modal .modal-body ul li .journey {
+          padding: 6px 7px;
+          background: #ededed;
+          background: linear-gradient(90deg, #ededed 0%, whitesmoke 15%, white 30%, white 40%, white 50%, white 60%, #fefefe 70%, #f7f7f7 85%, #ededed 100%);
+          width: 100%;
+          height: 72px;
+          border: 1px solid #b4b4b4;
+          border-radius: 3px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          position: relative; }
+          .journey-modal .modal-body ul li .journey .journey-dates {
+            color: #3640b1;
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center; }
+            .journey-modal .modal-body ul li .journey .journey-dates .modal-date {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center; }
+              .journey-modal .modal-body ul li .journey .journey-dates .modal-date span {
+                text-transform: uppercase;
+                font-size: 9px; }
+              .journey-modal .modal-body ul li .journey .journey-dates .modal-date .time {
+                margin-top: 2px;
+                font-size: 15px; }
+            .journey-modal .modal-body ul li .journey .journey-dates .icon {
+              margin: 0 6px;
+              width: 8px;
+              height: 8px; }
+              .journey-modal .modal-body ul li .journey .journey-dates .icon img {
+                width: 100%;
+                height: 100%; }
+          .journey-modal .modal-body ul li .journey .journey-information {
+            padding-top: 7px;
+            flex: 1 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 2px;
+            font-size: 12px;
+            color: #083145; }
+          .journey-modal .modal-body ul li .journey .price {
+            position: absolute;
+            right: 8px;
+            top: 10px;
+            border-radius: 5px;
+            background-color: #d23b38;
+            color: #fff;
+            font-size: 14px;
+            padding: 6px 8px; }
+
+#root {
+  border: 1px solid #f8f8f8;
+  margin: 50px auto;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  position: relative; }
+  @media (max-width: 575px) {
+    #root {
+      margin: 0;
+      width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */

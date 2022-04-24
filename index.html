@@ -2,103 +2,129 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/codemirror.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Document</title>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/codemirror.min.css">
+ <link rel="stylesheet" href="./assets/css/style.css">
+ <title>Document</title>
 </head>
 
 <body>
-    <div id="root">
-        <header>
-            <h1>Şu Bilet</h1>
-        </header>
-        <main>
-            <form id="search">
-                <div class="location-input-group">
-                    <span class="double-arrows">
-                        <img src="./assets/img/double-arrows.svg" alt="">
-                    </span>
-                    <div class="origin-input-group">
-                        <span class="origin-title">Nereden</span>
-                        <div class="origin js-origin">
-                            <input disabled type="text" class="origin-input js-origin-input" value="İstanbul Avrupa">
-                            <div class="origin-locations js-origin-locations">
-                            </div>
-                            <span class="location-icon">
-                                <img src="./assets/img/origin.svg" alt="">
-                            </span>
-                        </div>
-                    </div>
-                    <div class="destination-input-group">
-                        <span class="destination-title">Nereye</span>
-                        <div class="destination js-destination">
-                            <input disabled type="text" class="destination-input js-destination-input" value="Ankara">
-                            <div class="destination-locations js-destination-locations">
+ <div id="root">
+  <header>
+   <h1>Şu Bilet</h1>
+  </header>
+  <main>
+   <form id="search">
+    <div class="location-input-group">
+     <span class="double-arrows">
+      <img src="./assets/img/double-arrows.svg" alt="">
+     </span>
+     <div class="origin-input-group js-origin-input-group">
+      <span class="origin-title">Nereden</span>
+      <div class="origin js-origin" data-id="349" data-parentid="250" data-type="Town">
+       <input disabled type="text" class="origin-input js-origin-input" value="İstanbul Avrupa">
+       <div class="origin-locations js-origin-locations">
+       </div>
+       <span class="location-icon">
+        <img src="./assets/img/origin.svg" alt="">
+       </span>
+      </div>
+     </div>
+     <div class="destination-input-group js-destination-input-group">
+      <span class="destination-title">Nereye</span>
+      <div class="destination js-destination" data-id="356" data-parentid="222" data-type="Town">
+       <input disabled type="text" class="destination-input js-destination-input" value="Ankara">
+       <div class="destination-locations js-destination-locations">
 
-                            </div>
-                            <span class="location-icon">
-                                <img src="./assets/img/destination.svg" alt="">
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="date-input-group">
-                    <span class="date-title">Nereden</span>
-                    <div class="date js-date">
-                        <input type="date" class="date-input js-date-input">
-                        <div class="date-locations js-date-locations">
-                        </div>
-                        <span class="date-icon">
-                            <img src="./assets/img/calendar.svg" alt="">
-                        </span>
-                    </div>
-                    <div class="date-buttons">
-                        <button class="date-now js-date-today">Bugün</button>
-                        <button class="date-tomorrow js-date-tomorrow">Yarın</button>
-                    </div>
-                </div>
-                <div class="find-ticket js-find-ticket">
-                    <button>Bileti Bul</button>
-                </div>
-            </form>
-        </main>
-        <footer>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor
-                in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at
-                vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis
-                dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam
-                nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim
-                veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-                consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
-                exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
-                iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
-                facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit
-                augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit,
-                sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
-                minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-                consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
-                exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
-                iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
-                facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit
-                augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit,
-                sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
-                minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-                consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
-                exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
-                iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
-                facilisis at vero eros et accumsan et iusto odio dignissim qui blan</p>
-        </footer>
+       </div>
+       <span class="location-icon">
+        <img src="./assets/img/destination.svg" alt="">
+       </span>
+      </div>
+     </div>
     </div>
+    <div class="alert js-alert">
 
-    <script type="module" src="./assets/js/app.js"></script>
+    </div>
+    <div class="date-input-group">
+     <span class="date-title">Nereden</span>
+     <div class="date js-date">
+      <input type="date" class="date-input js-date-input">
+      <div class="date-locations js-date-locations">
+      </div>
+      <span class="date-icon">
+       <img src="./assets/img/calendar.svg" alt="">
+      </span>
+     </div>
+     <div class="date-buttons">
+      <button class="date-now js-date-today">Bugün</button>
+      <button class="date-tomorrow js-date-tomorrow">Yarın</button>
+     </div>
+    </div>
+    <div class="find-ticket">
+     <button class="js-find-ticket">Bileti Bul</button>
+    </div>
+   </form>
+  </main>
+  <footer>
+   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+    laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+    ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor
+    in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at
+    vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis
+    dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam
+    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim
+    veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+    consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+    tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+    exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
+    iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
+    facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit
+    augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit,
+    sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
+    minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+    consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+    tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+    exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
+    iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
+    facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit
+    augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit,
+    sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
+    minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+    consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+    tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+    exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
+    iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
+    facilisis at vero eros et accumsan et iusto odio dignissim qui blan</p>
+  </footer>
+  <div class="journey-modal js-journey-modal">
+   <div class="modal-title">
+    <div class="modal-back-button js-modal-back-button">
+     <img height="15" src="./assets/img/back-arrow.svg" alt="">
+    </div>
+    <div class="modal-locations">
+     <span class="js-modal-origin">
+      İstanbul Avrupa
+     </span>
+     -
+     <span class="js-modal-destination">
+      İstanbul Avrupa
+     </span>
+    </div>
+    <div class="modal-date js-modal-date">
+     1.1.5852
+    </div>
+   </div>
+   <div class="modal-body">
+    <ul class="js-journeies">
+    </ul>
+   </div>
+  </div>
+ </div>
+
+ <script type="module" src="./assets/js/app.js"></script>
 </body>
 
 </html>
